@@ -8,7 +8,7 @@ import os
 from dotenv import load_dotenv
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "https://travelguide-eight.vercel.app"}})
 load_dotenv()
 MURF_API_KEY = os.getenv("MURF_API_KEY")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
